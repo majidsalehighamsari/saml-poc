@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<md:EntityDescriptor
+	xmlns:md="urn:oasis:names:tc:SAML:2.0:metadata"
+  validUntil="2020-04-18T18:21:02Z"
+  cacheDuration="PT604800S"
+  entityID="https://4m3wg.sse.codesandbox.io/">
+	<md:SPSSODescriptor 
+      AuthnRequestsSigned="true" 
+      WantAssertionsSigned="true"
+      protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<md:SingleLogoutService 
+          Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+          Location="https://r9z1x.sse.codesandbox.io/" />
+		<md:NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</md:NameIDFormat>
+		<md:AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+                                     Location="https://r9z1x.sse.codesandbox.io/xyz/custom-saml/callback"
+                                     index="1" />
+	</md:SPSSODescriptor>
+</md:EntityDescriptor>
